@@ -39,13 +39,26 @@ spec:
           spec:
             description: ConfigMapReloaderSpec defines the desired state of ConfigMapReloader.
             properties:
-              foo:
+              configMapName:
                 description: Foo is an example field of ConfigMapReloader. Edit configmapreloader_types.go
                   to remove/update
                 type: string
+              destinationNamespace:
+                type: string
+              sourceNamespace:
+                type: string
+            required:
+            - configMapName
             type: object
           status:
             description: ConfigMapReloaderStatus defines the observed state of ConfigMapReloader.
+            properties:
+              lastReloadTime:
+                description: |-
+                  INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
+                  Important: Run "make" to regenerate code after modifying this file
+                format: date-time
+                type: string
             type: object
         type: object
     served: true

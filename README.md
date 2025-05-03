@@ -133,3 +133,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+
+```sh
+kubectl create secret docker-registry ghcr-secret --docker-server=ghcr.io --docker-username=drumont --docker-password=
+```
